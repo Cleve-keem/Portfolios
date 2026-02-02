@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Layout Surfaces */
+  --color-canvas: #ffffff;
+  --color-surface: #fff0f4;
+  /* Brand/Action */
+  --color-primary: #2349ff;
+  --color-accent: #c27cfa;
+  --color-surface-muted: #fff3f6;
+  /* Content/Text */
+  --color-content-strong: #0a0614;
+  --color-content-default: #171717;
+  --color-content-muted: #6a6f8e;
+  /* Feedback */
+  --color-status-error: #fc5a5a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-canvas: #0a0a0a;
+    --color-surface: #1a1517;
+    --color-primary: #5c7cff;
+    --color-accent: #d8a7ff;
+    --color-content-strong: #ffffff;
+    --color-content-default: #ededed;
+    --color-content-muted: #a0a4b8;
   }
 }
 
+@theme inline {
+  --color-background: var(--color-canvas);
+  --color-foreground: var(--color-content-default);
+  --color-brand: var(--color-primary);
+  --color-highlight: var(--color-accent);
+  --color-surface-tint: var(--color-surface);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-error: var(--color-status-error);
+  /* Typography */
+  --font-poppins: "Poppins", system-ui;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
 }
