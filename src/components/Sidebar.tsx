@@ -11,19 +11,20 @@ type SidebarProps = {
 export default function Sidebar({ open, closeFn }: SidebarProps) {
   return (
     <aside
-      className={`fixed top-0 left-0 bg-background w-full duration-500 ease-out ${open ? "translate-0 h-full" : "-translate-full h-0"}`}
+      className={`fixed inset-0 z-100 bg-background w-full h-dvh duration-700 ease-out transition-all transform-gpu ${open ? "translate-x-0 translate-y-0 opacity-100 [clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)]" : "-translate-x-50 -translate-y-50 opacity-0 [clip-path:polygon(0_0,0_0,0_0)]"}`}
+      // className={`fixed top-0 left-0 bg-background w-full duration-500 ease-out ${open ? "translate-0 h-full" : "-translate-full h-0"}`}
     >
-      <div className="sidebar-header flex border-b border-b-surface-muted p-4 ">
+      <div className="sidebar-header flex border-b border-b-surface-muted p-6">
         <Logo />
         <CircleChevronLeft onClick={() => closeFn(false)} />
       </div>
-      <nav className="p-4">
-        <ul className="space-y-5">
+      <nav className="py-6 px-6">
+        <ul className="space-y-7">
           {navItems.map((item, id) => {
             const Icon = item?.icon;
             return (
-              <li className="flex items-center gap-2 text-sm" key={id}>
-                {Icon && <Icon className="size-5" />}
+              <li className="flex items-center gap-4 text-xl" key={id}>
+                {Icon && <Icon className="text-inherit" />}
                 <span className="text-inherit">{item.label}</span>
               </li>
             );

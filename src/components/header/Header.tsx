@@ -9,7 +9,7 @@ export default function Header() {
   const [openNav, setOpenNav] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 p-4 shadow-md flex">
+    <header className="sticky top-0 p-6 shadow-md flex">
       <Logo />
       <TextAlignEnd onClick={() => setOpenNav(true)} />
       <Sidebar open={openNav} closeFn={setOpenNav} />
