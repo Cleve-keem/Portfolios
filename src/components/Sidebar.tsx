@@ -44,11 +44,8 @@ export default function Sidebar({ open, closeFn }: SidebarProps) {
                 fill
                 className="object-cover rounded-full"
               />
-              {/* <div className="size-3 rounded-full bg-green-500 z-999 bottom-0" /> */}
-              {/* <span className="absolute size-3.5 -bottom-0.75 right-0.75 rounded-full border border-green-300 animate-blink" />
-              <span className="absolute -bottom-0.5 right-1 size-3 rounded-full bg-green-500" /> */}
               <span className="absolute bottom-0 right-0 flex size-3.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex size-3.5 rounded-full bg-green-500"></span>
               </span>
             </div>
