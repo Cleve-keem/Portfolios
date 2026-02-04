@@ -5,7 +5,7 @@ export const designSkills = [
   "Design system",
 ];
 
-export const workingTools = [
+export const workingToolsData = [
   "Tailwindcss",
   "NextJs",
   "React Native",

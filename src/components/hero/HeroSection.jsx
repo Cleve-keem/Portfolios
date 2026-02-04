@@ -19,8 +19,8 @@ export default function HeroSection() {
           Hi there! 👋🏻 <br /> I’m Hackhim,
         </h1>
         <p className="mb-4">
-          I'm an Frontend Developer turned Fullstack 😂 by
-          <span className="text-red-600"> Mistake</span>. My passion is in
+          I'm a Frontend Developer turned Software Developer 😂 by
+          <span className="text-brand"> Mistake</span>. My passion is in
           creating human-centered applications that can improve our daily lives
           while creating a cross-cultural impact. <br /> <br /> My past
           experience lends me the ability to communicate effectively across
