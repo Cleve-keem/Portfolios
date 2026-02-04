@@ -18,7 +18,7 @@ export default function WorkingTools() {
                 alt="trello icon"
                 fill
                 loading="lazy"
-                className="object-contain p-2"
+                className="object-contain p-3"
                 sizes="100px"
               />
             </div>
