@@ -2,6 +2,7 @@ import { CircleChevronLeft } from "lucide-react";
 import Logo from "./Logo";
 import { Dispatch, SetStateAction } from "react";
 import { navItems } from "@/constants/navItems";
+import Image from "next/image";
 
 type SidebarProps = {
   open: boolean;
@@ -11,15 +12,14 @@ type SidebarProps = {
 export default function Sidebar({ open, closeFn }: SidebarProps) {
   return (
     <aside
-      // className={`fixed inset-0 z-100 bg-background w-full h-dvh duration-700 transition-all ${open ? "translate-x-0 translate-y-0 opacity-100 [clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)]" : "-translate-x-50 -translate-y-50 opacity-0 [clip-path:polygon(0_0,0_0,0_0)]"}`}
-      className={`fixed inset-0 bg-background w-full translate-all duration-500 ease-out ${open ? "translate-x-0 translate-y-0 h-full" : "-translate-x-full -translate-y-full h-0"}`}
+      className={`fixed flex flex-col inset-0 bg-background w-full h-dvh translate-all duration-500 ${open ? "translate-x-0 translate-y-0" : "-translate-x-full -translate-y-full"}`}
     >
       <div className="sidebar-header flex border-b border-b-surface-muted p-6">
         <Logo />
         <CircleChevronLeft onClick={() => closeFn(false)} />
       </div>
-      <nav className="py-6 px-6">
-        <ul className="space-y-7">
+      <nav className="p-6 flex-1">
+        <ul className="space-y-7 flex-1">
           {navItems.map((item, id) => {
             const Icon = item?.icon;
             return (
@@ -30,8 +30,31 @@ export default function Sidebar({ open, closeFn }: SidebarProps) {
             );
           })}
         </ul>
-        <div></div>
       </nav>
+      {/* Avatar and theme toggle */}
+      <div className="p-4">
+        {/* PROFILE */}
+        <div className="flex items-center gap-4 bg-surface-tint p-2 rounded-xl">
+          {/* Avatar */}
+          <div className="relative size-12">
+            <div className="relative size-full rounded-full">
+              <Image
+                src="/avatar.jpeg"
+                alt="My avatar with badge"
+                fill
+                className="object-cover rounded-full"
+              />
+              {/* <div className="avatar-badge size-3 rounded-full bg-green-500 z-999 bottom-0" /> */}
+              <span className="absolute -bottom-0.5 right-1 size-3 rounded-full bg-green-500" />
+            </div>
+          </div>
+          {/* description */}
+          <div>
+            <h5 className="text-[16px] font-semibold">Hackhim Bello</h5>
+            <small className="">Software Developer</small>
+          </div>
+        </div>
+      </div>
     </aside>
   );
 }
