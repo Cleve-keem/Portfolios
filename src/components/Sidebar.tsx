@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import { Dispatch, SetStateAction } from "react";
 import { navItems } from "@/constants/navItems";
 import Image from "next/image";
+import Link from "next/link";
 
 type SidebarProps = {
   open: boolean;
@@ -12,7 +13,7 @@ type SidebarProps = {
 export default function Sidebar({ open, closeFn }: SidebarProps) {
   return (
     <aside
-      className={`fixed flex flex-col inset-0 bg-background w-full h-dvh translate-all duration-500 ${open ? "translate-x-0 translate-y-0" : "-translate-x-full -translate-y-full"}`}
+      className={`fixed flex flex-col inset-0 bg-background w-full h-dvh translate-all duration-500 ${open ? "translate-x-0 translate-y-0" : "-translate-x-full -translate-y-full"} md:hidden`}
     >
       <div className="sidebar-header flex border-b border-b-surface-muted p-6">
         <Logo />
@@ -25,7 +26,9 @@ export default function Sidebar({ open, closeFn }: SidebarProps) {
             return (
               <li className="flex items-center gap-4 text-xl" key={id}>
                 {Icon && <Icon className="text-inherit" />}
-                <span className="text-inherit">{item.label}</span>
+                <Link href={item.path} className="text-inherit">
+                  {item.label}
+                </Link>
               </li>
             );
           })}
