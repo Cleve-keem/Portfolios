@@ -42,10 +42,12 @@ export default function Sidebar({ open, closeFn }: SidebarProps) {
           <div className="relative size-12">
             <div className="relative size-full rounded-full">
               <Image
-                src="/avatar.jpeg"
+                src="/avatar.png"
                 alt="My avatar with badge"
                 fill
+                loading="lazy"
                 className="object-cover rounded-full"
+                sizes="100px"
               />
               <span className="absolute bottom-0 right-0 flex size-3.5">
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>

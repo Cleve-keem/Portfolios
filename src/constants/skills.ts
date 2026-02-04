@@ -6,13 +6,19 @@ export const designSkills = [
 ];
 
 export const workingToolsData = [
-  "Tailwindcss",
-  "NextJs",
-  "React Native",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Java",
-  "Trello",
-  "GIT & Github",
+  { image: "/tailwindcss.png", name: "Tailwindcss" },
+  { image: "/nextjs.jfif", name: "NextJs" },
+  { image: "/react.png", name: "React Native" },
+  { image: "/html.png", name: "HTML" },
+  { image: "/css.png", name: "CSS" },
+  { image: "/js.png", name: "JavaScript" },
+  { image: "/ts.png", name: "TypeScript" },
+  { image: "/java.jfif", name: "Java" },
+  { image: "/trello.png", name: "Trello" },
+  { image: "/nodejs.png", name: "NodeJs" },
+  { image: "/git.png", name: "Git" },
+  { image: "/docker.png", name: "Docker" },
+  { image: "/github.jfif", name: "Github" },
 ];
+
+// RiTailwindCssFill

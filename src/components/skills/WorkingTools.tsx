@@ -12,15 +12,17 @@ export default function WorkingTools() {
             key={i}
             className="size-25 text-center flex justify-center items-center flex-col"
           >
-            <div className="p-1 size-15 border border-border-muted rounded-full flex items-center justify-center mb-3">
+            <div className="relative p-3 size-15 border border-border-muted rounded-full flex items-center justify-center mb-3">
               <Image
-                src="/trello.png"
+                src={tool.image}
                 alt="trello icon"
-                width={20}
-                height={20}
+                fill
+                loading="lazy"
+                className="object-contain p-2"
+                sizes="100px"
               />
             </div>
-            <small className="text-[14px]">{tool}</small>
+            <small className="text-[14px]">{tool.name}</small>
           </div>
         ))}
       </SkillContent>

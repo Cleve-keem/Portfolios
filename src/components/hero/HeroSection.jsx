@@ -7,10 +7,14 @@ export default function HeroSection() {
       {/* Hero Image */}
       <div className="relative h-90 w-full mx-auto rounded-2xl overflow-hidden mb-6">
         <Image
-          src="/avatar.jpeg"
+          src="/avatar.png"
           alt="My profile Image"
           fill
+          priority
+          // loading="eager"
           className="object-cover"
+          // sizes="150px"
+          sizes="(max-width: 768px) 100vw, 300px"
         />
       </div>
       {/* Hero description */}
