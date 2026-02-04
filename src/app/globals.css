@@ -12,6 +12,8 @@
   --color-content-strong: #0a0614;
   --color-content-default: #171717;
   --color-content-muted: #6a6f8e;
+  /* border */
+  --color-border-muted: #ccd9ea;
   /* Feedback */
   --color-status-error: #fc5a5a;
 }
@@ -25,6 +27,7 @@
     --color-content-strong: #ffffff;
     --color-content-default: #ededed;
     --color-content-muted: #a0a4b8;
+    /* --color-border-muted: #CAD9EC; */
   }
 }
 
@@ -34,6 +37,7 @@
   --color-brand: var(--color-primary);
   --color-highlight: var(--color-accent);
   --color-surface-tint: var(--color-surface);
+  --color-border-muted: var(--color-border-muted);
   --color-surface-muted: var(--color-surface-muted);
   --color-error: var(--color-status-error);
   /* Typography */

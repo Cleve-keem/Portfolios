@@ -1,5 +1,5 @@
 import { CircleChevronLeft } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { Dispatch, SetStateAction } from "react";
 import { navItems } from "@/constants/navItems";
 import Image from "next/image";

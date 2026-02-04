@@ -2,7 +2,7 @@
 
 import Logo from "../Logo";
 import { TextAlignEnd } from "lucide-react";
-import Sidebar from "../Sidebar";
+import Sidebar from "./Sidebar";
 import { useState } from "react";
 
 export default function Header() {
