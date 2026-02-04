@@ -1,9 +1,10 @@
 import { designSkills } from "@/constants/skills";
+import SkillWrapper, { SkillLabel } from "./SkillWrapper";
 
 export default function DevelopementSkill() {
   return (
-    <div>
-      <h3 className="font-medium mb-4">Design Skills</h3>
+    <SkillWrapper>
+      <SkillLabel>Design Skills</SkillLabel>
       <ul className="p-4 border border-border-muted rounded-2xl space-y-3">
         {designSkills.map((skill, i) => (
           <li key={i} className="text-[14px] flex items-center gap-2">
@@ -12,6 +13,6 @@ export default function DevelopementSkill() {
           </li>
         ))}
       </ul>
-    </div>
+    </SkillWrapper>
   );
 }
