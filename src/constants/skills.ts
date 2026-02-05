@@ -20,5 +20,3 @@ export const workingToolsData = [
   { image: "/docker.png", name: "Docker" },
   { image: "/github.png", name: "Github" },
 ];
-
-// RiTailwindCssFill
