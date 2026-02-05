@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ProjectCard() {
   return (
-    <div className="shadow-md p-3 rounded-2xl">
+    <div className="shadow-md p-3 rounded-2xl bg-canvas">
       {/* image */}
-      <div className="relative w-full h-35 rounded-2xl overflow-hidden">
+      <div className="relative w-full h-40 rounded-2xl overflow-hidden">
         <Image
           src="/combBoy.jfif"
           alt="project image"
