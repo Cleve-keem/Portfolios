@@ -33,8 +33,9 @@ export default function Projects() {
             );
           })}
         </ul>
-
         <ProjectCard />
+
+        <p className="text-3xl my-5 text-center">Incoming Projects...</p>
       </div>
     </section>
   );
