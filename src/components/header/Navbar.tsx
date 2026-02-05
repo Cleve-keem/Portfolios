@@ -55,6 +55,7 @@ export default function Navbar({
                   className="object-cover rounded-full"
                   sizes="100px"
                 />
+                {/* ping indicator */}
                 <span className="absolute bottom-0 right-0 flex size-3.5">
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex size-3.5 rounded-full bg-green-500"></span>
