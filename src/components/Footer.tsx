@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -6,9 +9,19 @@ export default function Footer() {
       <div>
         <div>
           <div className="mb-4">
-            <h1 className="text-3xl font-light">
+            <motion.h1
+              initial={{ y: 0 }}
+              animate={{ y: [-5, 2] }}
+              transition={{
+                duration: 0.5,
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+              }}
+              className="text-3xl font-light"
+            >
               Thank You<span className="text-brand">!</span>
-            </h1>
+            </motion.h1>
             <small className="text-[10px] font-normal">
               For sparing some time and reviewing my work
             </small>
