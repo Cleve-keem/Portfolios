@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/header/Header";
 import HeroSection from "@/components/hero/HeroSection";
 import Projects from "@/components/project/Projects";
@@ -10,6 +11,7 @@ export default function page() {
       <HeroSection />
       <Skills />
       <Projects />
+      <Footer />
     </div>
   );
 }
