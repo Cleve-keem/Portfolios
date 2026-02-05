@@ -5,7 +5,7 @@ export default function ProjectCard() {
   return (
     <div className="shadow-md p-3 rounded-2xl bg-canvas">
       {/* image */}
-      <div className="relative w-full h-50 rounded-2xl overflow-hidden mb-2">
+      <div className="relative w-full h-60 rounded-2xl overflow-hidden mb-2">
         <Image
           src="/combBoy.jfif"
           alt="project image"
@@ -34,7 +34,7 @@ export default function ProjectCard() {
           itaque?
         </p>
       </div>
-      <button className="text-sm border my-3 w-full h-8 rounded bg-brand text-white">
+      <button className="text-sm border my-3 w-full h-10 rounded-lg bg-brand text-white">
         View
       </button>
     </div>
