@@ -1,17 +1,19 @@
-import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-8">
+    <footer className="px-6 py-8 border-t border-border-muted">
       <div>
         <div>
           <div className="mb-4">
-            <h1 className="text-3xl font-bold">Thank You!</h1>
-            <small className="text-[10px] font-bold">
+            <h1 className="text-3xl font-light">
+              Thank You<span className="text-brand">!</span>
+            </h1>
+            <small className="text-[10px] font-normal">
               For sparing some time and reviewing my work
             </small>
           </div>
-          <p className="text-[12px]">
+          <p className="text-[13px] mb-2">
             Do you have great idea and want to share. Let’s make something
             amazing together
           </p>
@@ -21,6 +23,17 @@ export default function Footer() {
         </div>
         <div>
           <span className="w-full h-0.5 inline-block bg-footer-muted" />
+          <div className="flex flex-col gap-2 text-[12px] mt-2">
+            <div className="space-x-2.5">
+              <Link href="">Privacy Policy</Link>
+              <Link href="">Cookies Policy</Link>
+            </div>
+            <div className="space-x-2.5">
+              <Link href="">LinkedIn</Link>
+              <Link href="">Twitter</Link>
+              <Link href="">Facebook</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
