@@ -9,7 +9,7 @@ export default function HeroSection() {
           {/* Hero Image */}
           <div className="relative h-90 w-full mx-auto rounded-2xl overflow-hidden mb-6 md:w-[40%]">
             <Image
-              src="/BlackBoy.jfif"
+              src="/avatar.jpeg"
               alt="My profile Image"
               fill
               priority
