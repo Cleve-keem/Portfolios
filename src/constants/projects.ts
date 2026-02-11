@@ -5,7 +5,7 @@ export const projectData = [
     category: "fullstack",
     featured: true,
     order: 1,
-    coverImage: "/images/projects/personal-blog-marko/cover.png",
+    coverImage: "/projects/personal-blog.jfif",
     gallery: [
       "/images/projects/personal-blog-marko/home.png",
       "/images/projects/personal-blog-marko/post-page.png",
@@ -44,7 +44,7 @@ export const projectData = [
     category: "fullstack",
     featured: false,
     order: 2,
-    coverImage: "/images/projects/unit-converter-ejs/cover.png",
+    coverImage: "/projects/unit-converter.jfif",
     gallery: [
       "/images/projects/unit-converter-ejs/home.png",
       "/images/projects/unit-converter-ejs/conversion-result.png",
@@ -77,7 +77,7 @@ export const projectData = [
     category: "backend",
     featured: true,
     order: 3,
-    coverImage: "/images/projects/blog-platform-api/cover.png",
+    coverImage: "/projects/api.jfif",
     gallery: [
       "/images/projects/blog-platform-api/postman-collection.png",
       "/images/projects/blog-platform-api/swagger-docs.png",
@@ -113,7 +113,7 @@ export const projectData = [
     category: "backend",
     featured: false,
     order: 4,
-    coverImage: "/images/projects/weather-api/cover.png",
+    coverImage: "/projects/api2.jfif",
     gallery: [
       "/images/projects/weather-api/request-example.png",
       "/images/projects/weather-api/response-example.png",
@@ -147,7 +147,7 @@ export const projectData = [
     category: "backend",
     featured: false,
     order: 5,
-    coverImage: "/images/projects/todo-list-api/cover.png",
+    coverImage: "/projects/api3.jfif",
     gallery: ["/images/projects/todo-list-api/postman-crud.png"],
     architectureDiagram: null,
     description:
