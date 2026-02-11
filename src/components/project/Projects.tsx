@@ -56,7 +56,10 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         ) : (
-          <p>No {sortBy} project available!</p>
+          <p>
+            No {sortBy.at(0)?.toUpperCase() + sortBy.slice(1)} project
+            available!
+          </p>
         )}
       </div>
     </section>
