@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { GithubIcon } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -41,8 +42,13 @@ export default function Footer() {
               <Link href="">Privacy Policy</Link>
               <Link href="">Cookies Policy</Link>
             </div>
-            <div className="space-x-2.5">
-              <Link href="">LinkedIn</Link>
+            <div className="flex items-center">
+              <Link
+                href=""
+                className="size-6 inline-flex p-1 rounded-full items-center border"
+              >
+                <GithubIcon />
+              </Link>
               <Link href="">Twitter</Link>
               <Link href="">Facebook</Link>
             </div>

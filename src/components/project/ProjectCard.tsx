@@ -1,7 +1,33 @@
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
-export default function ProjectCard() {
+type ProjectCardType = {
+  data: {
+    slug: string;
+    name: string;
+    category: string;
+    order?: number;
+    featured: boolean;
+    coverImage: string;
+    gallery: string[];
+    architectureDiagram: string;
+    description: string;
+    longDescription: string;
+    createdAt: string;
+    role: string;
+    stack: string[];
+    features: string[];
+    architecture: string;
+    challenges: string[];
+    solutions: string;
+    lessons: string;
+    status: string;
+    liveUrl: string;
+    githubUrl: string;
+  };
+};
+
+export default function ProjectCard({ data }: any) {
   return (
     <div className="shadow-md p-3 rounded-2xl bg-canvas">
       {/* image */}
@@ -24,15 +50,12 @@ export default function ProjectCard() {
       {/* description */}
       <div className="py-3 px-1 space-y-3">
         <div className="flex items-center">
-          <h4 className="font-semibold flex-1">E-commerce Store</h4>
-          <a href="/">
+          <h4 className="font-semibold flex-1">{data.name}</h4>
+          <a href={data.liveUrl}>
             <ExternalLink className="size-4" />
           </a>
         </div>
-        <p className="text-[14px]">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores,
-          itaque?
-        </p>
+        <p className="text-[14px]">{data.description}</p>
       </div>
       <button className="text-sm border my-3 w-full h-10 rounded-lg bg-brand text-white">
         View
