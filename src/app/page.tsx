@@ -11,7 +11,6 @@ export default function page() {
       <Header />
       <HeroSection />
       <Skills />
-      <Experience />
       <Projects />
       <Footer />
     </div>

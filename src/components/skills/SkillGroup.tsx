@@ -12,8 +12,14 @@ export function SkillGroup({ children, className, ...props }: SkillGroupProps) {
   );
 }
 
-export function SkillLabel({ children }: { children?: string }) {
-  return <h3 className="font-medium mb-4">{children}</h3>;
+export function SkillLabel({
+  children,
+  className,
+}: {
+  children?: string;
+  className?: string;
+}) {
+  return <h3 className={`font-medium mb-4 ${className}`}>{children}</h3>;
 }
 
 export function SkillContent({
