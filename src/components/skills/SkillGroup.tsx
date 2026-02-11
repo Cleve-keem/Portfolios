@@ -49,7 +49,7 @@ export function SkillLabel({
 }) {
   return (
     <h3
-      className={`font-bold tracking-[0.2em] text-content-muted mb-6 ${className}`}
+      className={`font-normal tracking-[0.2em] text-content-muted mb-6 ${className}`}
     >
       {children}
     </h3>

@@ -28,7 +28,7 @@ export default function DevelopmentSkill() {
 
   return (
     <SkillGroup className="py-12 md:py-20">
-      <SkillLabel className="text-content-strong mb-8 text-center md:text-left font-bold tracking-tight text-2xl md:text-3xl">
+      <SkillLabel className="text-content-strong mb-8 text-center md:text-left tracking-tight text-2xl md:text-3xl">
         Design Expertise
       </SkillLabel>
 
