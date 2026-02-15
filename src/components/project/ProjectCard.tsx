@@ -53,7 +53,7 @@ export default function ProjectCard({ data }: any) {
       <div className="py-3 px-1 space-y-3">
         <div className="flex items-center">
           <h4 className="font-semibold flex-1">{data.name}</h4>
-          <a href={data.liveUrl}>
+          <a href={data.githubUrl} target="_blank">
             <ExternalLink className="size-4" />
           </a>
         </div>
