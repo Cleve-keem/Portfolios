@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 type ProjectCardType = {
   data: {
@@ -59,9 +60,12 @@ export default function ProjectCard({ data }: any) {
         </div>
         <p className="text-[14px]">{data.description}</p>
       </div>
-      <button className="text-sm border my-3 w-full h-10 rounded-lg bg-brand text-white">
+      <Link
+        href={`projects/${data.slug}`}
+        className="inline-flex items-center justify-center text-sm border my-3 w-full h-10 rounded-lg bg-brand text-white"
+      >
         View
-      </button>
+      </Link>
     </div>
   );
 }

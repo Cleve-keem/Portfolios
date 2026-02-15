@@ -48,7 +48,7 @@ export default function Navbar({
             <div className="relative size-12">
               <div className="relative size-full rounded-full">
                 <Image
-                  src="/avatar.png"
+                  src="/avatar2.png"
                   alt="My avatar with badge"
                   fill
                   loading="lazy"
