@@ -18,6 +18,7 @@ export default async function Page({ params }: Props) {
           src={project?.coverImage as string}
           alt={project?.name as string}
           fill
+          priority
           className="object-fill"
         />
       </div>
