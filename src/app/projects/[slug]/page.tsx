@@ -1,9 +1,8 @@
+import BackButton from "@/components/BackButton";
 import Footer from "@/components/Footer";
 import SlideInViewReveal from "@/components/SlideInViewReveal";
 import { projectData } from "@/constants/projects";
-import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -12,12 +11,11 @@ type Props = {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const project = projectData.find((project) => project.slug === slug);
-  const router = useRouter();
 
   return (
     <>
       <div className="p-8">
-        <ArrowLeft className="mb-7" onClick={() => router.back()} />
+        <BackButton />
         <SlideInViewReveal className="relative w-full min-h-100 rounded-2xl overflow-hidden mb-10">
           <Image
             src={project?.coverImage as string}
