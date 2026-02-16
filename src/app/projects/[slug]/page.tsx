@@ -1,5 +1,6 @@
 import { projectData } from "@/constants/projects";
-import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -11,7 +12,15 @@ export default async function Page({ params }: Props) {
 
   return (
     <div className="px-10 py-8">
-      <ArrowLeft className="mb-3" />
+      <ArrowLeft className="mb-7" />
+      <div className="relative w-full min-h-100 rounded-2xl overflow-hidden mb-10">
+        <Image
+          src={project?.coverImage as string}
+          alt={project?.name as string}
+          fill
+          className="object-fill"
+        />
+      </div>
       <h1 className="text-3xl mb-4">{project?.name}</h1>
       <p className="mb-4 leading-7">{project?.longDescription}</p>
       <div className="mb-5">

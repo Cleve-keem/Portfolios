@@ -1,14 +1,25 @@
 export type ProjectCategory = "frontend" | "backend" | "fullstack";
 
-export interface Project {
+export type ProjectType = {
   slug: string;
-  title: string;
+  name: string;
   category: ProjectCategory;
-  stack: string[];
-  role: string;
+  featured: boolean;
+  order: number;
+  coverImage: string;
+  gallery: string[];
+  architectureDiagram: string | null;
   description: string;
-  challenges: Record<string, string>[];
+  longDescription: string;
+  createdAt: string;
+  role: string;
+  stack: string[];
+  features: string[];
+  architecture: string;
+  challenges: string;
+  solutions: string;
   lessons: string;
-  github: string;
-  live: string | null;
-}
+  status: string;
+  liveUrl: string | null;
+  githubUrl: string;
+};

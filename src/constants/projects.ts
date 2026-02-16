@@ -1,4 +1,6 @@
-export const projectData = [
+import { ProjectType } from "@/types/project.type";
+
+export const projectData: ProjectType[] = [
   {
     slug: "personal-blog-marko",
     name: "Personal Blog (Marko)",
