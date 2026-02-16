@@ -1,3 +1,4 @@
+import SlideInViewReveal from "@/components/SlideInViewReveal";
 import { projectData } from "@/constants/projects";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
@@ -13,15 +14,17 @@ export default async function Page({ params }: Props) {
   return (
     <div className="px-10 py-8">
       <ArrowLeft className="mb-7" />
-      <div className="relative w-full min-h-100 rounded-2xl overflow-hidden mb-10">
-        <Image
-          src={project?.coverImage as string}
-          alt={project?.name as string}
-          fill
-          priority
-          className="object-fill"
-        />
-      </div>
+      <SlideInViewReveal>
+        <div className="relative w-full min-h-100 rounded-2xl overflow-hidden mb-10">
+          <Image
+            src={project?.coverImage as string}
+            alt={project?.name as string}
+            fill
+            priority
+            className="object-fill"
+          />
+        </div>
+      </SlideInViewReveal>
       <h1 className="text-3xl mb-4">{project?.name}</h1>
       <p className="mb-4 leading-7">{project?.longDescription}</p>
       <div className="mb-5">
@@ -40,10 +43,12 @@ export default async function Page({ params }: Props) {
           ))}
         </ol>
       </div>
-      <div className="mb-5">
-        <h3 className="text-2xl mb-5">Challenges</h3>
-        <p className="px-5 leading-7">{project?.challenges}</p>
-      </div>
+      <SlideInViewReveal>
+        <div className="mb-5">
+          <h3 className="text-2xl mb-5">Challenges</h3>
+          <p className="px-5 leading-7">{project?.challenges}</p>
+        </div>
+      </SlideInViewReveal>
       <div className="mb-5">
         <h3 className="text-2xl mb-4">Solutions</h3>
         <p className="px-5 leading-7">{project?.solutions}</p>
