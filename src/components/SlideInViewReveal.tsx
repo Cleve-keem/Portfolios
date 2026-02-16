@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { animate, motion, useInView, Variants } from "framer-motion";
+import { ReactNode, useRef } from "react";
+import { HTMLMotionProps, motion, useInView, Variants } from "framer-motion";
 
-const SlideInViewReveal = ({ children }: { children: React.ReactNode }) => {
+interface SlideInViewRevealProps extends HTMLMotionProps<"div"> {
+  children: ReactNode;
+}
+
+const SlideInViewReveal = ({ children, ...props }: SlideInViewRevealProps) => {
   const ref = useRef(null);
-
   const element = useInView(ref, { once: true });
-
-  // useEffect(() => {}, []);
 
   const variants: Variants = {
     hidden: {
@@ -24,6 +25,7 @@ const SlideInViewReveal = ({ children }: { children: React.ReactNode }) => {
     <motion.div
       ref={ref}
       variants={variants}
+      {...props}
       initial="hidden"
       animate={element ? "visible" : ""}
       transition={{ duration: 0.5, ease: "easeInOut" }}
