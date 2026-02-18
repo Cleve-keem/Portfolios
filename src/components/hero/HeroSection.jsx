@@ -46,7 +46,7 @@ export default function HeroSection() {
               className="relative h-full w-full rounded-3xl overflow-hidden border border-surface-muted shadow-2xl"
             >
               <Image
-                src="/avatar.jpeg"
+                src="/BlackBoy.jfif"
                 alt="Hackhim"
                 fill
                 priority
@@ -91,9 +91,6 @@ export default function HeroSection() {
                   initial={{ rotate: -20 }}
                   transition={{
                     duration: 0.2,
-                    // type: "spring",
-                    // stiffness: 400,
-                    // damping: 10,
                   }}
                   className="block text-brand size-5"
                 >
