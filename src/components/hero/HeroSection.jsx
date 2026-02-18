@@ -90,12 +90,12 @@ export default function HeroSection() {
                   }}
                   initial={{ rotate: -20, x: 0 }}
                   transition={{
-                    duration: 3,
+                    duration: 0.2,
                     type: "spring",
                     stiffness: 400,
                     damping: 10,
                   }}
-                  className="inline-flex justify-center text-brand size-5 transition-transform duration-300"
+                  className="block text-brand size-5"
                 >
                   <ArrowRight className="size-4" />
                 </motion.span>
