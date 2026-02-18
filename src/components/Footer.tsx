@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative px-6 py-12 md:py-20 border-t border-border-muted bg-canvas overflow-hidden">
+    <footer className="relative px-6 py-12 md:py-20 border-t border-border-muted bg-background overflow-hidden">
       {/* Subtle Background Glow for Depth */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-linear-to-r from-transparent via-brand to-transparent opacity-50" />
       <div className="max-w-6xl mx-auto">

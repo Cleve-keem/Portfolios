@@ -13,7 +13,7 @@ export default function Experience() {
   };
 
   return (
-    <section className="px-6 py-20 max-w-6xl mx-auto overflow-hidden">
+    <section className="px-6 pb-10 max-w-6xl mx-auto overflow-hidden">
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,16 +30,13 @@ export default function Experience() {
         viewport={{ once: true, amount: 0.1 }}
         className="relative"
       >
-        {/* THE CENTER SPINE (Desktop Only) */}
         <div className="absolute left-4 md:left-1/2 top-3 bottom-0 w-0.5 bg-linear-to-b from-brand via-surface-muted to-transparent -translate-x-1/2 hidden md:block" />
-
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div
               key={index}
               className="relative flex items-center justify-between md:even:flex-row-reverse group"
             >
-              {/* 1. CONTENT BOX */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -47,7 +44,7 @@ export default function Experience() {
                 viewport={{ once: true }}
                 className="w-full md:w-[45%] pl-10 md:pl-0"
               >
-                <div className="p-6 rounded-3xl border border-surface-muted bg-canvas shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="p-6 rounded-3xl border border-surface-muted bg-background shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="flex flex-col mb-4">
                     <time className="text-brand font-bold text-xs uppercase tracking-widest mb-1">
                       {exp.period}
@@ -74,15 +71,13 @@ export default function Experience() {
                 </div>
               </motion.div>
 
-              {/* 2. THE CENTER DOT */}
               <div className="absolute left-4 md:left-1/2 top-8 md:top-1/2 -translate-y-1/2 -translate-x-1/2 z-20">
                 <div className="relative flex items-center justify-center">
                   <div className="absolute size-8 bg-brand/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500" />
-                  <div className="size-4 rounded-full border-4 border-canvas bg-brand shadow-lg transition-transform duration-300 group-hover:scale-125" />
+                  <div className="size-4 rounded-full border-4 border-background bg-brand shadow-lg transition-transform duration-300 group-hover:scale-125" />
                 </div>
               </div>
 
-              {/* 3. SPACER (Desktop Only) */}
               <div className="hidden md:block w-[45%]" />
             </div>
           ))}

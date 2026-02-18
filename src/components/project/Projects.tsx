@@ -15,7 +15,7 @@ export default function Projects() {
   }, [sortBy]);
 
   return (
-    <section className="p-6 md:py-20">  
+    <section className="p-6 md:py-20">
       <div className="w-full max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -28,8 +28,7 @@ export default function Projects() {
             </p>
           </div>
 
-          {/* TAB SYSTEM */}
-          <nav className="inline-flex p-1.5 bg-surface-muted/10 border border-surface-muted/20 backdrop-blur-xl rounded-2xl shadow-inner">
+          <nav className="inline-flex flex-wrap justify-between p-1.5 bg-surface-muted/10 border border-surface-muted/20 backdrop-blur-xl rounded-2xl shadow-inner">
             {categories.map((f) => {
               const label = f.toLowerCase();
               const isActive = sortBy === label;
@@ -38,24 +37,23 @@ export default function Projects() {
                   key={f}
                   onClick={() => setSortBy(label)}
                   className={`
-          relative px-5 py-2.5 text-xs md:text-sm font-semibold tracking-tight 
-          transition-all duration-300 rounded-xl outline-none
-          ${isActive ? "text-canvas" : "text-content-muted hover:text-content-strong hover:bg-surface-muted/20"}
+          relative px-5 py-2 text-[12px] md:text-sm font-normal tracking-tight
+          transition-all duration-300 rounded-[10px] outline-none
+          ${isActive ? "text-primary" : "text-content-muted hover:text-content-strong hover:bg-surface-muted/20"}
         `}
                 >
-                  {/* The Text Label */}
+                  {/* Text Label */}
                   <span className="relative z-10">{f}</span>
-
-                  {/* The Animated "Pill" - Uses a high-quality spring and subtle shadow */}
+                  {/* Pill */}
                   {isActive && (
                     <motion.div
                       layoutId="activeTabBadge"
-                      className="absolute inset-0 bg-content-strong rounded-xl shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
+                      className="absolute inset-0 bg-content-strong rounded-[10px] shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
                       transition={{
                         type: "spring",
                         stiffness: 400,
                         damping: 30,
-                        mass: 0.8, // Adds a tiny bit of weight to the slide
+                        mass: 0.8,
                       }}
                     />
                   )}

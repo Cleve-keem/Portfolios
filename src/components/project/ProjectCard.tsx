@@ -30,7 +30,7 @@ type ProjectCardType = {
 
 export default function ProjectCard({ data }: any) {
   return (
-    <div className="shadow-md p-3 rounded-2xl bg-canvas">
+    <div className="shadow-md p-3 rounded-2xl bg-background">
       {/* image */}
       <div className="relative w-full h-60 rounded-2xl overflow-hidden mb-2">
         <Image

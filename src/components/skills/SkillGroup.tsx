@@ -3,14 +3,12 @@
 import { ReactNode } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
 
-// Use HTMLMotionProps to include motion-specific types (like 'animate', 'variants', etc.)
 interface SkillGroupProps extends HTMLMotionProps<"section"> {
   children: ReactNode;
 }
 
 export function SkillGroup({ children, className, ...props }: SkillGroupProps) {
   return (
-    // FIX: Change 'section' to 'motion.section' so it can accept the motion props
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +22,6 @@ export function SkillGroup({ children, className, ...props }: SkillGroupProps) {
   );
 }
 
-// Ensure SkillContent also uses motion.div if it receives motion props
 export function SkillContent({
   children,
   className,
@@ -32,7 +29,7 @@ export function SkillContent({
 }: HTMLMotionProps<"div">) {
   return (
     <motion.div
-      className={`p-6 border border-surface-muted rounded-3xl bg-canvas/50 backdrop-blur-sm shadow-sm ${className}`}
+      className={`p-6 border border-surface-muted rounded-3xl bg-background/50 backdrop-blur-sm shadow-sm ${className}`}
       {...props}
     >
       {children}

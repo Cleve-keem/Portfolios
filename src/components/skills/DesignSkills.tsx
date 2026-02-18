@@ -52,7 +52,7 @@ export default function DevelopmentSkill() {
               <div className="absolute -inset-0.5 rounded-full bg-linear-to-r from-brand via-highlight to-brand opacity-0 blur-md group-hover:opacity-60 transition-all duration-700 bg-size-[200%_auto] animate-[gradient_3s_linear_infinite]" />
 
               {/* Responsive Badge Container */}
-              <div className="relative flex items-center gap-2 px-4 py-2.5 md:px-6 md:py-3 rounded-full border border-surface-muted bg-canvas shadow-sm transition-all duration-300 group-hover:border-brand group-hover:shadow-brand/20">
+              <div className="relative flex items-center gap-2 px-4 py-2.5 md:px-6 md:py-3 rounded-full border border-surface-muted bg-background shadow-sm transition-all duration-300 group-hover:border-brand group-hover:shadow-brand/20">
                 <span className="size-2 rounded-full bg-brand shadow-[0_0_8px_rgba(35,73,255,0.6)] group-hover:animate-ping" />
                 <span className="text-sm md:text-base font-semibold text-content-default group-hover:text-brand transition-colors whitespace-nowrap">
                   {skill}
