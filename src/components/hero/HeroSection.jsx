@@ -86,14 +86,14 @@ export default function HeroSection() {
                 </Link>
                 <motion.span
                   variants={{
-                    hover: { rotate: 0, x: 5 },
+                    hover: { rotate: 0, width: "18px" },
                   }}
-                  initial={{ rotate: -20, x: 0 }}
+                  initial={{ rotate: -20 }}
                   transition={{
                     duration: 0.2,
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 10,
+                    // type: "spring",
+                    // stiffness: 400,
+                    // damping: 10,
                   }}
                   className="block text-brand size-5"
                 >

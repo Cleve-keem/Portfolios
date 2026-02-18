@@ -82,7 +82,7 @@ export default function Navbar({
             <Link
               key={i}
               href=""
-              className={`transform hover:text-brand hover:scale-3d transition-all duration-300 px-2 ${item.label === "Contact" ? "bg-brand rounded-4xl text-white px-3 py-1" : ""}`}
+              className={`transform hover:text-brand/70 hover:scale-3d transition-all duration-300 px-2 ${item.label === "Contact" ? "bg-brand rounded-4xl text-white px-3 py-1" : ""}`}
             >
               {item.label}
             </Link>
