@@ -6,9 +6,11 @@ export const saveThemeMode = (mode: ThemeType) => {
 
 export const deleteThemeMode = () => localStorage.removeItem("theme");
 
-export const root = document.documentElement;
-
 export const applyTheme = (mode: ThemeType) => {
+  if (typeof window === "undefined") return;
+
+  const root = document.documentElement;
+
   if (mode === "dark") {
     root.classList.add("dark");
   } else if (mode === "light") {

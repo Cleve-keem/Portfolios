@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,12 +9,7 @@ import {
 } from "./ui/dropdown-menu";
 import { MonitorCog, Moon, Settings, Sun } from "lucide-react";
 import { ThemeType } from "@/types/theme.type";
-import {
-  applyTheme,
-  deleteThemeMode,
-  root,
-  saveThemeMode,
-} from "@/utils/theme";
+import { applyTheme, deleteThemeMode, saveThemeMode } from "@/utils/theme";
 
 const menuItems: Record<string, any>[] = [
   { label: "Light", icon: Sun },
@@ -29,26 +24,21 @@ const ThemeToggle = () => {
   // Fresh Load!
   useEffect(() => {
     const saved = localStorage.getItem("theme") as ThemeType | null;
-    if (saved && saved !== "system") {
-      setTheme(saved);
-      applyTheme(saved);
-    } else {
-      // System
-      setTheme("system");
-      applyTheme("system");
-    }
+    let modeToApply: ThemeType = saved && saved !== "system" ? saved : "system";
+
+    setTheme(modeToApply);
+    applyTheme(modeToApply);
     setMounted(true);
   }, []);
 
-  // Theme changes to system
+  // Listen for system preference changes (only when in "system" mode)
   useEffect(() => {
     if (theme !== "system") return;
+
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
+        applyTheme("system");
       }
     };
 

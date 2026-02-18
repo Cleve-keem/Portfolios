@@ -24,7 +24,7 @@
   --color-destructive: #fc5a5a;
   /* Typograpgy */
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  
+
   /* Shadcn Design Token */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -61,14 +61,22 @@
 }
 
 .dark {
-  --color-canvas: #0a0a0a;
-  --color-surface: #1a1517;
-  --color-primary: #5c7cff;
-  --color-accent: #d8a7ff;
-  --color-content-strong: #ffffff;
-  --color-content-default: #ededed;
-  --color-content-muted: #a0a4b8;
-  --color-border-muted: #cad9ec;
+  /* Layout Surfaces ──────────────── */
+  --color-canvas: oklch(8% 0.02 260);
+  --color-surface: oklch(11% 0.025 265);
+  --color-surface-muted: oklch(14% 0.022 270);
+  /* Brand / Action ───────────────── */
+  --color-primary: oklab(51.971999999999994% -0.01808 -0.26724);
+  --color-accent: oklch(78% 0.13 310);
+  /* Content / Text ───────────────── */
+  --color-content-strong: oklch(96% 0.015 260);
+  --color-content-default: oklch(90% 0.01 260);
+  --color-content-muted: oklch(70% 0.02 265);
+  /* Borders & Dividers ───────────── */
+  --color-border-muted: oklch(24% 0.03 260);
+  --color-footer-muted: oklch(18% 0.02 250);
+  /* Feedback ─────────────────────── */
+  --color-destructive: oklch(68% 0.18 30);
   /* Shadcn Design Tokens */
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
