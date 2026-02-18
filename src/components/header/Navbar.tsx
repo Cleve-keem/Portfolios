@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 import { navItems } from "@/constants/navItems";
 import Image from "next/image";
 import Link from "next/link";
+import ThemeToggle from "../ThemeToggle";
 
 type SidebarProps = {
   open?: boolean;
@@ -40,6 +41,7 @@ export default function Navbar({
             })}
           </ul>
         </nav>
+        <ThemeToggle />
         {/* Avatar and theme toggle */}
         <div className="p-4">
           {/* PROFILE */}
