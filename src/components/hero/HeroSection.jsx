@@ -75,16 +75,28 @@ export default function HeroSection() {
             <div>
               <motion.div
                 variants={fadeInUp}
-                // whileHover={{ x: 10 }}
-                className="mb-4 flex items-center gap-2 group w-fit"
+                whileHover="hover"
+                className="mb-4 flex items-center gap-2 w-fit cursor-pointer"
               >
                 <Link
                   href="/"
-                  className="group text-brand text-[14px] font-semibold tracking-tight"
+                  className="text-brand text-[14px] font-semibold tracking-tight"
                 >
                   Let's connect
                 </Link>
-                <motion.span className="inline-flex justify-center text-brand size-5 -rotate-20 group-hover:rotate-0">
+                <motion.span
+                  variants={{
+                    hover: { rotate: 0, x: 5 },
+                  }}
+                  initial={{ rotate: -20, x: 0 }}
+                  transition={{
+                    duration: 3,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 10,
+                  }}
+                  className="inline-flex justify-center text-brand size-5 transition-transform duration-300"
+                >
                   <ArrowRight className="size-4" />
                 </motion.span>
               </motion.div>
