@@ -9,7 +9,12 @@ import {
 } from "./ui/dropdown-menu";
 import { MonitorCog, Moon, Settings, Sun } from "lucide-react";
 import { ThemeType } from "@/types/theme.type";
-import { deleteThemeMode, saveThemeMode } from "@/utils/theme";
+import {
+  applyTheme,
+  deleteThemeMode,
+  root,
+  saveThemeMode,
+} from "@/utils/theme";
 
 const menuItems: Record<string, any>[] = [
   { label: "Light", icon: Sun },
@@ -21,44 +26,29 @@ const ThemeToggle = () => {
   const [theme, setTheme] = useState<ThemeType>("system");
   const [mounted, setMounted] = useState(false);
 
+  // Fresh Load!
   useEffect(() => {
     const saved = localStorage.getItem("theme") as ThemeType | null;
-
-    const applyTheme = (mode: ThemeType) => {
-      if (mode === "dark") {
-        document.documentElement.classList.add("dark");
-      } else if (mode === "light") {
-        document.documentElement.classList.remove("dark");
-      } else {
-        // system
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      }
-    };
-
     if (saved && saved !== "system") {
       setTheme(saved);
       applyTheme(saved);
     } else {
+      // System
       setTheme("system");
       applyTheme("system");
     }
-
     setMounted(true);
   }, []);
 
+  // Theme changes to system
   useEffect(() => {
     if (theme !== "system") return;
-
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
-        document.documentElement.classList.add("dark");
+        root.classList.add("dark");
       } else {
-        document.documentElement.classList.remove("dark");
+        root.classList.remove("dark");
       }
     };
 
@@ -71,19 +61,10 @@ const ThemeToggle = () => {
 
     if (mode === "system") {
       deleteThemeMode();
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
     } else {
       saveThemeMode(mode);
-      if (mode === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
     }
+    applyTheme(mode);
   };
 
   if (!mounted) {
