@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight, GithubIcon, LinkedinIcon, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -58,7 +59,7 @@ export default function HeroSection() {
           <div className="md:w-[55%]">
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-black leading-[1.5] mb-6 text-content-strong"
+              className="text-4xl md:text-5xl font-black leading-normal mb-6 text-content-strong"
             >
               Hi there! 👋🏻 <br />
               <span className="text-brand">I’m Bello Hakeem</span>
@@ -71,15 +72,51 @@ export default function HeroSection() {
                 lives.
               </p>
             </motion.div>
-
-            <motion.div variants={fadeInUp} whileHover={{ x: 10 }}>
-              <Link
-                href="/"
-                className="group flex items-center gap-3 text-brand text-[14px] font-semibold tracking-tight"
+            <div>
+              <motion.div
+                variants={fadeInUp}
+                // whileHover={{ x: 10 }}
+                className="mb-4 flex items-center gap-2 group w-fit"
               >
-                Let's connect
-              </Link>
-            </motion.div>
+                <Link
+                  href="/"
+                  className="group text-brand text-[14px] font-semibold tracking-tight"
+                >
+                  Let's connect
+                </Link>
+                <motion.span className="inline-flex justify-center text-brand size-5 -rotate-20 group-hover:rotate-0">
+                  <ArrowRight className="size-4" />
+                </motion.span>
+              </motion.div>
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-center gap-4"
+              >
+                {/* Social Icons with Guru Hover */}
+                {[
+                  {
+                    icon: <GithubIcon size={18} />,
+                    href: "https:github.com/Cleve-keem",
+                    label: "Github",
+                  },
+                  { icon: <Twitter size={18} />, href: "#", label: "Twitter" },
+                  {
+                    icon: <LinkedinIcon size={18} />,
+                    href: "#",
+                    label: "Facebook",
+                  },
+                ].map((social, i) => (
+                  <Link
+                    key={i}
+                    href={social.href}
+                    className="size-10 flex items-center justify-center rounded-xl border border-border-muted text-content-muted hover:border-brand hover:text-brand transition-all duration-300"
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </div>
       </motion.div>
