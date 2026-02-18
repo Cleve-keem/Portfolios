@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    company: "SF Edtech",
+    company: "Sound Foundation Edtech",
     role: "Frontend Developer",
     period: "2025 — Present",
     points: ["Frontend Instructor"],

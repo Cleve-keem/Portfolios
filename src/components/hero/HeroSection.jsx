@@ -28,7 +28,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="p-5 md:py-20 xl:px-15 overflow-hidden">
+    <section className="p-5 md:py-20 xl:px-15 overflow-hidden" id="home">
       <motion.div
         initial="hidden"
         animate="visible"

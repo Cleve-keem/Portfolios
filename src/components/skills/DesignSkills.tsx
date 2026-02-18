@@ -38,7 +38,7 @@ export default function DevelopmentSkill() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2, margin: "-50px" }}
-          className="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4"
+          className="flex flex-wrap justify-center gap-3 md:gap-4"
         >
           {designSkills.map((skill, i) => (
             <motion.div

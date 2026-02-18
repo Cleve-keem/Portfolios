@@ -1,6 +1,7 @@
 import { CircleChevronLeft } from "lucide-react";
-import Logo from "../Logo";
 import { Dispatch, SetStateAction } from "react";
+import { motion } from "framer-motion";
+import Logo from "../Logo";
 import { navItems } from "@/constants/navItems";
 import Image from "next/image";
 import Link from "next/link";
@@ -81,10 +82,12 @@ export default function Navbar({
           {navItems.map((item, i) => (
             <Link
               key={i}
-              href=""
+              href={item.path}
               className={`transform hover:text-brand/70 hover:scale-3d transition-all duration-300 px-2 ${item.label === "Contact" ? "bg-brand rounded-4xl text-white px-3 py-1" : ""}`}
             >
-              {item.label}
+              <motion.span layoutId="activeTagBadge" className="">
+                {item.label}
+              </motion.span>
             </Link>
           ))}
         </div>
