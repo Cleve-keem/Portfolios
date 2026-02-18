@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, GithubIcon, LinkedinIcon, Twitter } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import SocialLink from "../SocialLink";
+import { socials } from "@/constants/socials";
 
 export default function HeroSection() {
   const fadeInUp = {
@@ -101,28 +103,8 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="flex items-center gap-4"
               >
-                {/* Social Icons with Guru Hover */}
-                {[
-                  {
-                    icon: <GithubIcon size={18} />,
-                    href: "https:github.com/Cleve-keem",
-                    label: "Github",
-                  },
-                  { icon: <Twitter size={18} />, href: "#", label: "Twitter" },
-                  {
-                    icon: <LinkedinIcon size={18} />,
-                    href: "#",
-                    label: "Facebook",
-                  },
-                ].map((social, i) => (
-                  <Link
-                    key={i}
-                    href={social.href}
-                    className="size-10 flex items-center justify-center rounded-xl border border-border-muted text-content-muted hover:border-brand hover:text-brand transition-all duration-300"
-                    aria-label={social.label}
-                  >
-                    {social.icon}
-                  </Link>
+                {socials.map((social, i) => (
+                  <SocialLink social={social} key={i} />
                 ))}
               </motion.div>
             </div>
