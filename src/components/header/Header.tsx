@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 p-6 shadow-md backdrop-blur-2xl z-1000 transition-all duration-300">
-      <div className="w-full max-w-360 flex mx-auto">
+      <div className="w-full max-w-360 flex items-center mx-auto">
         <Logo />
         <TextAlignEnd onClick={() => setOpenNav(true)} className="md:hidden" />
         <Navbar type="mobile" open={openNav} closeFn={setOpenNav} />

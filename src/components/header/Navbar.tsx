@@ -33,7 +33,7 @@ export default function Navbar({
               return (
                 <li className="flex items-center gap-4 text-xl" key={id}>
                   {Icon && <Icon className="text-inherit" />}
-                  <Link href={item.path} className="text-inherit">
+                  <Link href={item.path} className={`text-inherit`}>
                     {item.label}
                   </Link>
                 </li>
@@ -76,18 +76,19 @@ export default function Navbar({
 
   if (type == "desktop") {
     return (
-      <nav className="hidden md:block">
+      <nav className="hidden md:flex md:items-center">
         <div className="space-x-8">
           {navItems.map((item, i) => (
             <Link
               key={i}
               href=""
-              className={`transform hover:text-brand hover:scale-3d transition-all duration-300 px-2 ${item.label === "Contact" ? "bg-brand rounded-4xl text-surface-muted px-3 py-1" : ""}`}
+              className={`transform hover:text-brand hover:scale-3d transition-all duration-300 px-2 ${item.label === "Contact" ? "bg-brand rounded-4xl text-white px-3 py-1" : ""}`}
             >
               {item.label}
             </Link>
           ))}
         </div>
+        <ThemeToggle />
       </nav>
     );
   }

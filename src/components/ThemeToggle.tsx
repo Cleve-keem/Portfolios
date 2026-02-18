@@ -71,8 +71,8 @@ const ThemeToggle = () => {
     <div className="px-6 py-4">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button aria-label="Toggle theme">
-            <Settings />
+          <button aria-label="Toggle theme outline">
+            <Settings className="outline-none focus:outline active:outline-none" />
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="ml-4 z-1100 min-w-37.5">

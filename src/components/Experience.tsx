@@ -13,7 +13,7 @@ export default function Experience() {
   };
 
   return (
-    <section className="px-6 pb-10 max-w-6xl mx-auto overflow-hidden">
+    <section className="px-6 pb-10 max-w-6xl md:min-w-[90%] mx-auto overflow-hidden">
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
