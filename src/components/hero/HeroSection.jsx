@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
-  // Variants for the text containers
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -34,12 +33,10 @@ export default function HeroSection() {
         className="max-w-5xl mx-auto w-full"
       >
         <div className="flex flex-col md:flex-row-reverse items-center gap-12 xl:gap-20">
-          {/* IMAGE: Floating & Scaling Effect */}
           <motion.div
             variants={fadeInUp}
             className="relative h-100 w-full max-w-87.5 md:w-[45%] group"
           >
-            {/* The "Glow" behind the image */}
             <div className="absolute -inset-4 bg-brand/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
             <motion.div
@@ -58,42 +55,20 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* CONTENT: Staggered Text Reveal */}
           <div className="md:w-[55%]">
             <motion.h1
               variants={fadeInUp}
               className="text-4xl md:text-5xl font-black leading-[1.1] mb-6 text-content-strong"
             >
               Hi there! 👋🏻 <br />
-              <span className="text-brand">I’m Hackhim</span>
+              <span className="text-brand">I’m Bello Hakeem</span>
             </motion.h1>
 
             <motion.div variants={fadeInUp}>
               <p className="text-[16px] md:text-xl text-content-default leading-relaxed mb-8">
-                I'm a Frontend Developer turned Software Developer 😂 by{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10 font-bold italic">
-                    Mistake
-                  </span>
-                  {/* The Animated Fancy Underline */}
-                  <motion.svg
-                    viewBox="0 0 100 20"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="absolute -bottom-1 left-0 w-full h-3 text-brand/40"
-                  >
-                    <path
-                      d="M0 15 Q 25 5 50 15 Q 75 25 100 15"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                  </motion.svg>
-                </span>
-                . My passion is in creating human-centered applications that
-                improve daily lives.
+                I'm a Frontend Developer turned Software Developer. My
+                passion is in creating human-centered applications that improve
+                daily lives.
               </p>
             </motion.div>
 
