@@ -17,7 +17,8 @@ export default function Navbar({
   open,
   closeFn,
   type = "mobile",
-}: SidebarProps) {
+  activeSection,
+}: SidebarProps & { activeSection?: string }) {
   if (type == "mobile")
     return (
       <aside
@@ -30,9 +31,13 @@ export default function Navbar({
         <nav className="p-6 flex-1">
           <ul className="space-y-7 flex-1">
             {navItems.map((item, id) => {
+              const isActive = activeSection === item.path.replace("#", "");
               const Icon = item?.icon;
               return (
-                <li className="flex items-center gap-4 text-xl" key={id}>
+                <li
+                  className={`flex items-center gap-4 text-xl ${isActive ? "text-brand" : "text-content-muted"}`}
+                  key={id}
+                >
                   {Icon && <Icon className="text-inherit" />}
                   <Link href={item.path} className={`text-inherit`}>
                     {item.label}
@@ -79,7 +84,7 @@ export default function Navbar({
     return (
       <nav className="hidden md:flex md:items-center">
         <div className="space-x-8">
-          {navItems.map((item, i) => (
+          {/* {navItems.map((item, i) => (
             <Link
               key={i}
               href={item.path}
@@ -89,7 +94,33 @@ export default function Navbar({
                 {item.label}
               </motion.span>
             </Link>
-          ))}
+          ))} */}
+          {navItems.map((item, i) => {
+            const isActive = activeSection === item.path.replace("#", "");
+
+            return (
+              <Link
+                key={i}
+                href={item.path}
+                className={`relative px-3 py-1 transition-colors duration-300 ${
+                  isActive ? "text-brand" : "hover:text-brand/70"
+                } ${item.label === "Contact" ? "bg-brand rounded-full text-white px-4" : ""}`}
+              >
+                {item.label}
+
+                {/* Animated underline for active state */}
+                {isActive && item.label !== "Contact" && (
+                  <motion.div
+                    layoutId="activeSectionIndicator"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand rounded-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </div>
         <ThemeToggle />
       </nav>

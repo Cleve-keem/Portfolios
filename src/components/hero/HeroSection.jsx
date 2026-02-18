@@ -88,7 +88,7 @@ export default function HeroSection() {
                 </Link>
                 <motion.span
                   variants={{
-                    hover: { rotate: 0, width: "18px" },
+                    hover: { rotate: 0 },
                   }}
                   initial={{ rotate: -20 }}
                   transition={{

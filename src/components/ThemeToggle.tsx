@@ -59,7 +59,7 @@ const ThemeToggle = () => {
 
   if (!mounted) {
     return (
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 md:py-0">
         <button aria-label="Toggle theme" disabled>
           <Settings className="opacity-50" />
         </button>
@@ -68,7 +68,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <div className="px-6 py-4">
+    <div className="px-6 py-4 md:py-0">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button aria-label="Toggle theme outline">
