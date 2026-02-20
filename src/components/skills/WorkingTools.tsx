@@ -8,7 +8,7 @@ export default function WorkingTools() {
   return (
     <SkillGroup className="py-10">
       <SkillLabel className="text-content-strong mb-8 text-center md:text-center font-bold tracking-tight text-2xl md:text-3xl">
-        Working Tools
+        Technologies & Tools
       </SkillLabel>
       <div
         className="relative w-full overflow-hidden

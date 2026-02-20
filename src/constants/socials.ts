@@ -5,7 +5,7 @@ type SocialType = { icon: LucideIcon; href: string; label: string };
 export const socials: SocialType[] = [
   {
     icon: GithubIcon,
-    href: "https:github.com/Cleve-keem",
+    href: "https://github.com/Cleve-keem",
     label: "Github",
   },
   { icon: Twitter, href: "#", label: "Twitter" },
