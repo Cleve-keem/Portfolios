@@ -11,7 +11,7 @@ export default function ToolInView({ tool }: { tool: string }) {
   return (
     <motion.li
       ref={ref}
-      className={`py-10 text-4xl font-bold text-center ${inView ? "text-primary" : "text-gray-300"} text-nowrap md:text-5xl hover:text-brand transition-colors duration-500 md:text-left`}
+      className={`py-10 text-4xl font-bold text-center ${inView ? "text-primary hover:text-brand" : "text-gray-300 dark:text-gray-700"} text-nowrap md:text-5xl transition-colors duration-500 md:text-left`}
     >
       {tool}
     </motion.li>
