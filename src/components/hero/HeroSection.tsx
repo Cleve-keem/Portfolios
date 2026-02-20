@@ -135,47 +135,6 @@ export default function HeroSection() {
                 )}
               </AnimatePresence>
             </motion.div>
-            {/* <motion.div variants={fadeInUp}>
-              <motion.div
-                whileHover="hover"
-                className="mb-4 flex items-center gap-2 w-fit cursor-pointer"
-                onClick={() => setShowSocailLinks(!showSocialLinks)}
-              >
-                <span
-                  // href="/"
-                  className="text-brand text-[14px] font-semibold tracking-tight"
-                >
-                  {showSocialLinks ? "Close Links" : "Let's connect"}
-                </span>
-                <motion.span
-                  variants={{
-                    hover: { rotate: 0 },
-                  }}
-                  initial={{ rotate: -20 }}
-                  transition={{
-                    duration: 0.2,
-                  }}
-                  className="block text-brand size-5"
-                >
-                  <ArrowRight className="size-4" />
-                </motion.span>
-              </motion.div>
-              <AnimatePresence>
-                {showSocialLinks && (
-                  <motion.div
-                    variants={fadeInUp}
-                    initial={{ x: 10 }}
-                    animate={{ x: 0 }}
-                    exit={{ x: 10 }}
-                    className="flex items-center gap-4"
-                  >
-                    {socials.map((social, i) => (
-                      <SocialLink social={social} key={i} />
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div> */}
           </div>
         </div>
       </motion.div>
