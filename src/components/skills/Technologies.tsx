@@ -27,7 +27,9 @@ export default function Technologies() {
           </ul>
         </div>
         <div className="hidden w-full min-w-[320px] sticky top-0 h-screen md:flex items-center justify-center">
-          <div className="aspect-square w-full bg-gray-100">div Col</div>
+          <div className="aspect-square w-full bg-gray-100 dark:bg-gray-700 text-primary rounded-xl">
+            div Col
+          </div>
         </div>
       </div>
     </div>
