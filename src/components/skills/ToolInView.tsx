@@ -21,7 +21,7 @@ export default function ToolInView({ title }: ToolInViewProps) {
   return (
     <motion.li
       ref={ref}
-      className={`py-10 text-4xl font-bold text-center ${inView ? "text-primary hover:text-brand" : "text-gray-300 dark:text-gray-700"} text-nowrap md:text-5xl transition-colors duration-500 md:text-left`}
+      className={`py-10 text-2xl font-regular md:font-bold md:text-center ${inView ? "text-primary hover:text-brand" : "text-gray-300 dark:text-gray-700"} text-nowrap md:text-5xl transition-colors duration-500 md:text-left last:pb-8`}
     >
       {title}
     </motion.li>

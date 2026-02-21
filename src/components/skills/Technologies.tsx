@@ -32,7 +32,7 @@ export default function Technologies() {
         Technologies
       </h2>
       <div className="w-full flex items-start gap-20">
-        <div className="w-full py-[50vh]">
+        <div className="w-full py-5 lg:py-[50vh]">
           <ul>
             {tools.map((tool, id) => (
               <ToolInView key={id} title={tool.title} />
