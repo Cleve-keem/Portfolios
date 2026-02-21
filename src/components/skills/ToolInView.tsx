@@ -21,12 +21,12 @@ export default function ToolInView({ title }: ToolInViewProps) {
   return (
     <li
       ref={ref}
-      className={`py-10 text-2xl font-regular md:font-bold md:text-center ${inView ? "text-primary hover:text-brand" : "text-gray-300 dark:text-gray-700"} text-nowrap md:text-5xl transition-colors duration-500 md:text-left last:pb-8`}
+      className={`py-10 text-2xl font-regular md:font-bold md:text-center ${inView ? "text-primary hover:text-brand font-semibold md:font-bold" : "text-gray-300 dark:text-gray-700"} text-nowrap md:text-5xl transition-colors duration-500 md:text-left last:pb-8`}
     >
       {title}
       <motion.span
         // initial={{}}
-        className={`block h-2 rounded mt-2 bg-linear-to-r from-red-900 to-red-100 transition-all duration-500 ${inView ? "w-full" : "w-0"}`}
+        className={`block h-2 rounded mt-2 bg-linear-to-r from-blue-500 to-blue-900 transition-all duration-500 ${inView ? "w-full" : "w-0"}`}
       ></motion.span>
     </li>
   );
