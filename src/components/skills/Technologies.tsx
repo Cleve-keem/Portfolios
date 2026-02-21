@@ -14,15 +14,15 @@ import {
 import ToolInView from "./ToolInView";
 
 const tools = [
-  { title: "Figma", card: Figma },
-  { title: "Tailwindcss", card: TailwindCSS },
-  { title: "JavaScript", card: JavaScript },
-  { title: "HTML", card: HTML },
-  { title: "CSS", card: CSS },
-  { title: "NodeJs", card: NodeJs },
-  { title: "React-Native", card: ReactNative },
-  { title: "ExpressJs", card: Figma },
-  { title: "Redis", card: Redis },
+  { title: "Figma", card: Figma, level: 0 },
+  { title: "Tailwindcss", card: TailwindCSS, level: 80 },
+  { title: "JavaScript", card: JavaScript, level: 90 },
+  { title: "HTML", card: HTML, level: 100 },
+  { title: "CSS", card: CSS, level: 100 },
+  { title: "NodeJs", card: NodeJs, level: 100 },
+  { title: "React-Native", card: ReactNative, level: 100 },
+  { title: "ExpressJs", card: Figma, level: 100 },
+  { title: "Redis", card: Redis, level: 100 },
 ];
 
 export default function Technologies() {
@@ -35,7 +35,7 @@ export default function Technologies() {
         <div className="w-full py-5 md:py-[50vh]">
           <ul>
             {tools.map((tool, id) => (
-              <ToolInView key={id} title={tool.title} />
+              <ToolInView key={id} title={tool.title} level={tool.level} />
             ))}
           </ul>
         </div>
