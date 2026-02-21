@@ -27,12 +27,12 @@ const tools = [
 
 export default function Technologies() {
   return (
-    <div className="xl:max-w-6xl mx-auto">
+    <div className="xl:max-w-6xl xl:mx-auto">
       <h2 className="text-content-strong text-center md:text-center font-normal tracking-tight text-2xl md:text-3xl">
-        Technologies
+        Technologies & Tools
       </h2>
       <div className="w-full flex items-start gap-20">
-        <div className="w-full py-5 lg:py-[50vh]">
+        <div className="w-full py-5 md:py-[50vh]">
           <ul>
             {tools.map((tool, id) => (
               <ToolInView key={id} title={tool.title} />
