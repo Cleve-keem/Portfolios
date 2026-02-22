@@ -14,15 +14,21 @@ import {
 import ToolInView from "./ToolInView";
 
 const tools = [
-  { title: "Figma", card: Figma, level: 0 },
-  { title: "Tailwindcss", card: TailwindCSS, level: 80 },
-  { title: "JavaScript", card: JavaScript, level: 90 },
   { title: "HTML", card: HTML, level: 100 },
-  { title: "CSS", card: CSS, level: 100 },
-  { title: "NodeJs", card: NodeJs, level: 100 },
-  { title: "React-Native", card: ReactNative, level: 100 },
-  { title: "ExpressJs", card: Figma, level: 100 },
+  { title: "CSS", card: CSS, level: 95 },
+  { title: "JavaScript", card: JavaScript, level: 90 },
+  { title: "Git & GitHub", card: Figma, level: 90 },
+  { title: "TypeScript", card: JavaScript, level: 80 },
+  { title: "React", card: Figma, level: 90 },
+  { title: "Tailwindcss", card: TailwindCSS, level: 90 },
+  { title: "NextJs", card: Figma, level: 80 },
+  { title: "React-Native", card: ReactNative, level: 50 },
+  { title: "NodeJs & ExpressJs", card: NodeJs, level: 80 },
   { title: "Redis", card: Redis, level: 100 },
+  { title: "MySQL & PostgreSQL", card: Figma, level: 70 },
+  { title: "Docker", card: Figma, level: 70 },
+  { title: "Java", card: Figma, level: 40 },
+  { title: "Trello", card: Figma, level: 50 },
 ];
 
 export default function Technologies() {

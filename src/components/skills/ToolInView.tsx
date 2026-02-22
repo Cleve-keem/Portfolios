@@ -36,7 +36,6 @@ export default function ToolInView({ title, level }: ToolInViewProps) {
       <div
         className={`relative  h-1.5 bg-gray-100 dark:bg-gray-800 ${inView ? "w-full" : "w-0"} rounded-full overflow-visible transition-all duration-300`}
       >
-        {/* Animated Fill */}
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: inView ? `${level}%` : 0 }}
