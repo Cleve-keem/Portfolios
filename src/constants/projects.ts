@@ -136,7 +136,7 @@ export const projectData: ProjectType[] = [
     name: "Beauty Nigeria Expo",
     category: "frontend",
     order: 6,
-    coverImage: "/projects/personal-blog.jfif",
+    coverImage: "/projects/beauty-nigeria.png",
     description:
       "A performant full-stack personal blog application built with Marko for optimized SSR and client-side performance.",
     longDescription:

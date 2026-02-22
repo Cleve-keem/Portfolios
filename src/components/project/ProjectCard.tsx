@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProjectCard({ project }: any) {
   return (
-    <div className="shadow-md p-3 rounded-2xl bg-background h-100 flex flex-col">
+    <div className="shadow-md p-3 rounded-2xl bg-background h-110 flex flex-col">
       {/* image */}
       <div className="relative w-full h-60 rounded-2xl overflow-hidden mb-2">
         <Image
@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: any) {
           alt="project image"
           fill
           className="object-cover"
-          sizes="100px"
+          sizes="500px"
         />
         {project.liveUrl && (
           <div className="absolute text-white text-xs inline-block py-1 px-2 bg-brand top-1.5 right-2 rounded">
