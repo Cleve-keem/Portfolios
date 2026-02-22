@@ -4,6 +4,7 @@ export type ProjectType = {
   slug: string;
   name: string;
   category: ProjectCategory;
+  type?: string;
   featured?: boolean;
   order: number;
   coverImage: string;

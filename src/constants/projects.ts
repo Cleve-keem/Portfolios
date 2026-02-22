@@ -5,6 +5,7 @@ export const projectData: ProjectType[] = [
     slug: "personal-blog-marko",
     name: "Personal Blog (Marko)",
     category: "fullstack",
+    type: "Web App",
     order: 1,
     coverImage: "/projects/personal-blog.jfif",
     description:
@@ -34,6 +35,7 @@ export const projectData: ProjectType[] = [
     slug: "unit-converter-ejs",
     name: "Unit Converter (EJS)",
     category: "fullstack",
+    type: "Web App",
     order: 2,
     coverImage: "/projects/unit-converter.jfif",
     description:
@@ -60,6 +62,7 @@ export const projectData: ProjectType[] = [
     slug: "blog-platform-api",
     name: "Blog Platform API",
     category: "backend",
+    type: "API",
     order: 3,
     coverImage: "/projects/api.jfif",
     description:
@@ -88,6 +91,7 @@ export const projectData: ProjectType[] = [
     slug: "weather-api",
     name: "Weather API Proxy",
     category: "backend",
+    type: "API",
     order: 4,
     coverImage: "/projects/api2.jfif",
     description:
@@ -114,6 +118,7 @@ export const projectData: ProjectType[] = [
     slug: "todo-list-api",
     name: "Todo List API",
     category: "backend",
+    type: "API",
     order: 5,
     coverImage: "/projects/api3.jfif",
     description:
@@ -135,6 +140,7 @@ export const projectData: ProjectType[] = [
     slug: "beauty-nigeria-expo",
     name: "Beauty Nigeria Expo",
     category: "frontend",
+    type: "Web App",
     order: 6,
     coverImage: "/projects/beauty-nigeria.png",
     description:
