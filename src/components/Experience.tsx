@@ -13,14 +13,14 @@ export default function Experience() {
   };
 
   return (
-    <section className="px-6 pb-10 max-w-6xl md:min-w-[90%] mx-auto overflow-hidden">
+    <section className="pb-10 max-w-6xl md:min-w-[90%] mx-auto overflow-hidden">
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-3xl font-normal mb-20 text-center text-content-strong tracking-tight"
+        className="text-2xl font-normal mb-20 text-center text-content-strong tracking-tight"
       >
-        Work Experience
+        Work Experiences
       </motion.h3>
 
       <motion.div
@@ -30,7 +30,7 @@ export default function Experience() {
         viewport={{ once: true, amount: 0.1 }}
         className="relative"
       >
-        <div className="absolute left-4 md:left-1/2 top-3 bottom-0 w-0.5 bg-linear-to-b from-brand via-surface-muted to-transparent -translate-x-1/2 hidden md:block" />
+        <div className="absolute left-4 md:left-1/2 top-3 bottom-0 w-0.5 bg-linear-to-b from-brand to-transparent -translate-x-1/2 md:block" />
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div
@@ -56,7 +56,6 @@ export default function Experience() {
                       {exp.role}
                     </p>
                   </div>
-
                   <ul className="space-y-2">
                     {exp.points.map((point, idx) => (
                       <li

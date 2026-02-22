@@ -8,7 +8,7 @@ export default function WorkingTools() {
   return (
     <SkillGroup className="py-10">
       <SkillLabel className="text-content-strong mb-8 text-center md:text-center font-bold tracking-tight text-2xl md:text-3xl">
-        Tools Logos
+        Tool Logos
       </SkillLabel>
       <div
         className="relative w-full overflow-hidden
@@ -35,7 +35,7 @@ export default function WorkingTools() {
                 />
               </div>
 
-              <span className="text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-brand">
+              <span className="text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-brand text-nowrap text-center">
                 {tool.name}
               </span>
             </div>

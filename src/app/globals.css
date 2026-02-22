@@ -24,7 +24,6 @@
   --color-destructive: #fc5a5a;
   /* Typograpgy */
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
-
   /* Shadcn Design Token */
   --radius: 0.625rem;
   --background: oklch(1 0 0);

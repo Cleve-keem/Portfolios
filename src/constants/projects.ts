@@ -5,16 +5,8 @@ export const projectData: ProjectType[] = [
     slug: "personal-blog-marko",
     name: "Personal Blog (Marko)",
     category: "fullstack",
-    featured: true,
     order: 1,
     coverImage: "/projects/personal-blog.jfif",
-    gallery: [
-      "/images/projects/personal-blog-marko/home.png",
-      "/images/projects/personal-blog-marko/post-page.png",
-      "/images/projects/personal-blog-marko/mobile-view.png",
-    ],
-    architectureDiagram:
-      "/images/projects/personal-blog-marko/architecture.png",
     description:
       "A performant full-stack personal blog application built with Marko for optimized SSR and client-side performance.",
     longDescription:
@@ -28,8 +20,6 @@ export const projectData: ProjectType[] = [
       "Reusable UI components",
       "Optimized performance",
     ],
-    architecture:
-      "MVC-inspired layered structure with clear separation between routes, services, and views.",
     challenges:
       "Optimizing rendering performance and structuring a scalable SSR architecture.",
     solutions:
@@ -44,14 +34,8 @@ export const projectData: ProjectType[] = [
     slug: "unit-converter-ejs",
     name: "Unit Converter (EJS)",
     category: "fullstack",
-    featured: false,
     order: 2,
     coverImage: "/projects/unit-converter.jfif",
-    gallery: [
-      "/images/projects/unit-converter-ejs/home.png",
-      "/images/projects/unit-converter-ejs/conversion-result.png",
-    ],
-    architectureDiagram: null,
     description:
       "A Node.js-based unit converter using server-rendered EJS pages.",
     longDescription:
@@ -64,7 +48,6 @@ export const projectData: ProjectType[] = [
       "Input validation",
       "Conversion logic abstraction",
     ],
-    architecture: "Simple MVC structure separating routes and utility logic.",
     challenges: "Handling input validation and ensuring accurate conversions.",
     solutions: "Centralized conversion logic into reusable functions.",
     lessons:
@@ -77,14 +60,8 @@ export const projectData: ProjectType[] = [
     slug: "blog-platform-api",
     name: "Blog Platform API",
     category: "backend",
-    featured: true,
     order: 3,
     coverImage: "/projects/api.jfif",
-    gallery: [
-      "/images/projects/blog-platform-api/postman-collection.png",
-      "/images/projects/blog-platform-api/swagger-docs.png",
-    ],
-    architectureDiagram: "/images/projects/blog-platform-api/architecture.png",
     description:
       "A scalable RESTful API for a blogging platform built with modern backend patterns.",
     longDescription:
@@ -98,8 +75,6 @@ export const projectData: ProjectType[] = [
       "Validation with Zod",
       "Centralized error handling",
     ],
-    architecture:
-      "Layered architecture with separation of concerns and modular route handling.",
     challenges:
       "Designing scalable folder structure and error-handling patterns.",
     solutions:
@@ -113,14 +88,8 @@ export const projectData: ProjectType[] = [
     slug: "weather-api",
     name: "Weather API Proxy",
     category: "backend",
-    featured: false,
     order: 4,
     coverImage: "/projects/api2.jfif",
-    gallery: [
-      "/images/projects/weather-api/request-example.png",
-      "/images/projects/weather-api/response-example.png",
-    ],
-    architectureDiagram: "/images/projects/weather-api/architecture.png",
     description:
       "A production-ready Express proxy for the Visual Crossing Weather API.",
     longDescription:
@@ -133,8 +102,6 @@ export const projectData: ProjectType[] = [
       "Environment configuration",
       "Centralized response formatting",
     ],
-    architecture:
-      "Middleware-driven architecture with external service abstraction.",
     challenges: "Securing API keys and structuring external API calls.",
     solutions: "Used environment variables and service-layer abstraction.",
     lessons:
@@ -147,11 +114,8 @@ export const projectData: ProjectType[] = [
     slug: "todo-list-api",
     name: "Todo List API",
     category: "backend",
-    featured: false,
     order: 5,
     coverImage: "/projects/api3.jfif",
-    gallery: ["/images/projects/todo-list-api/postman-crud.png"],
-    architectureDiagram: null,
     description:
       "A RESTful API for managing tasks with structured routing and validation.",
     longDescription:
@@ -160,12 +124,35 @@ export const projectData: ProjectType[] = [
     role: "Backend Developer",
     stack: ["Node.js", "Express", "TypeScript"],
     features: ["CRUD operations", "Validation", "Structured routes"],
-    architecture: "Layered route-controller-service structure.",
     challenges: "Designing consistent API responses.",
     solutions: "Standardized response format across controllers.",
     lessons: "Strengthened RESTful API design principles.",
     status: "completed",
     liveUrl: null,
     githubUrl: "https://github.com/Cleve-keem/Todo-List-API",
+  },
+  {
+    slug: "beauty-nigeria-expo",
+    name: "Beauty Nigeria Expo",
+    category: "frontend",
+    order: 6,
+    coverImage: "/projects/personal-blog.jfif",
+    description:
+      "A performant full-stack personal blog application built with Marko for optimized SSR and client-side performance.",
+    longDescription:
+      "This project demonstrates a modern Node.js architecture using Express for routing and middleware, combined with Marko for high-performance server-side rendering.",
+    createdAt: "2025-12-12T15:38:49Z",
+    role: "Frontend Developer",
+    stack: ["React", "Google Form"],
+    features: ["Reusable UI components", "Optimized performance"],
+    challenges:
+      "Optimizing rendering performance and structuring a scalable SSR architecture.",
+    solutions:
+      "Leveraged Marko’s partial hydration and structured middleware properly.",
+    lessons:
+      "Learned performance-first architecture and server-rendered UI optimization.",
+    status: "completed",
+    liveUrl: "https://beauty-nigeria.com",
+    githubUrl: "https://github.com/Cleve-keem/personal-blog-marko",
   },
 ];

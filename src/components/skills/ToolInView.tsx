@@ -40,13 +40,13 @@ export default function ToolInView({ title, level }: ToolInViewProps) {
           initial={{ width: 0 }}
           animate={{ width: inView ? `${level}%` : 0 }}
           transition={{ duration: 1, ease: "circOut", delay: 0.2 }}
-          className="relative h-full rounded-full bg-linear-to-r from-blue-500 to-brand"
+          className="relative h-full rounded-full bg-linear-to-r from-blue-400 to-brand"
         >
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 8 }}
             transition={{ delay: 0.8 }}
-            className="absolute -right-4 -top-10"
+            className="absolute -right-4 -top-10 border"
           >
             <div className="relative bg-brand text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg">
               {level}%

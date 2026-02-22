@@ -21,65 +21,33 @@ export default function ToolCard({
 }
 
 export function Figma({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-blue-500">
-      Figma
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-blue-500"></ToolCard>;
 }
 export function JavaScript({ title }: { title: string }) {
   return (
-    <ToolCard title={title} gradient="from-white to-purple-500">
-      JavaScript
-    </ToolCard>
+    <ToolCard title={title} gradient="from-white to-purple-500"></ToolCard>
   );
 }
 export function CSS({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-slate-500">
-      Css
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-slate-500"></ToolCard>;
 }
 export function HTML({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-green-500">
-      HTML
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-green-500"></ToolCard>;
 }
 export function Docker({ title }: { title: string }) {
   return (
-    <ToolCard title={title} gradient="from-white to-yellow-500">
-      Docker
-    </ToolCard>
+    <ToolCard title={title} gradient="from-white to-yellow-500"></ToolCard>
   );
 }
 export function Redis({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-red-800">
-      Redis
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-red-800"></ToolCard>;
 }
 export function NodeJs({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-pink-500">
-      NodeJs
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-pink-500"></ToolCard>;
 }
 export function TailwindCSS({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-pink-500">
-      Tailwindcss
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-pink-500"></ToolCard>;
 }
 export function ReactNative({ title }: { title: string }) {
-  return (
-    <ToolCard title={title} gradient="from-white to-pink-500">
-      Tailwindcss
-    </ToolCard>
-  );
+  return <ToolCard title={title} gradient="from-white to-pink-500"></ToolCard>;
 }

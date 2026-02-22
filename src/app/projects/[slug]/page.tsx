@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SlideInViewReveal from "@/components/SlideInViewReveal";
 import { projectData } from "@/constants/projects";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -25,8 +26,22 @@ export default async function Page({ params }: Props) {
             className="object-cover"
           />
         </SlideInViewReveal>
-        <h1 className="text-3xl mb-4">{project?.name}</h1>
-        <p className="mb-4 leading-7">{project?.longDescription}</p>
+        <SlideInViewReveal>
+          {/* <div className="flex items-center-safe gap-4 flex-wrap"> */}
+          <h1 className="text-3xl mb-4">{project?.name}</h1>
+          {/* </div> */}
+          <p className="mb-4 leading-7">{project?.longDescription}</p>
+          <Link
+            href={
+              project?.githubUrl == undefined
+                ? ""
+                : (project?.githubUrl as string)
+            }
+            className="inline-block mb-4 border rounded-2xl px-4 py-1 text-sm bg-transparent text-canvas border-brand hover:ring-brand hover:scale-1 transition-all duration-200"
+          >
+            View souce code
+          </Link>
+        </SlideInViewReveal>
         <SlideInViewReveal className="mb-5">
           <h3 className="mb-4 text-2xl">Stacks</h3>
           <ul className="space-y-3 px-5">

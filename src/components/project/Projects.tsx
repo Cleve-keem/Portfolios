@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { AnimatePresence, motion } from "framer-motion";
 import { projectData } from "@/constants/projects";
+import { ProjectType } from "@/types/project.type";
 
 export default function Projects() {
   const [sortBy, setSortBy] = useState<string>("all");
@@ -81,7 +82,7 @@ export default function Projects() {
                   opacity: { duration: 0.2 },
                 }}
               >
-                <ProjectCard data={p} />
+                <ProjectCard project={p} />
               </motion.div>
             ))}
           </AnimatePresence>
