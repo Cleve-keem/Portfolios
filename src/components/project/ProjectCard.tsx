@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
               <span className="absolute bottom-1 right-0 inline-flex size-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
             </span>
-            <span className="ml-1 inline-flex">Live</span>
+            <span className="ml-1 inline-flex text-inherit">Live</span>
           </div>
         )}
       </div>
@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
         <div className="flex items-center">
           <h4 className="font-semibold flex-1">{project.name}</h4>
           {project.liveUrl && (
-            <a href={project.githubUrl} target="_blank" className="">
+            <a href={project.liveUrl} target="_blank">
               <ExternalLink className="size-4" />
             </a>
           )}

@@ -25,11 +25,14 @@ export default async function Page({ params }: Props) {
             priority
             className="object-cover"
           />
+          <div className="absolute bg-background bottom-0 left-0 rounded-tr-3xl px-10 py-5">
+            <div className="absolute size-4 bg-inherit -top-4 left-0 mask-[radial-gradient(circle_at_100%_0,transparent_15,black_16px)]" />
+            {project?.type}
+            <div className="absolute size-4 bg-inherit bottom-0 -right-4 mask-[radial-gradient(circle_at_100%_0,transparent_15,black_16px)]" />
+          </div>
         </SlideInViewReveal>
         <SlideInViewReveal>
-          {/* <div className="flex items-center-safe gap-4 flex-wrap"> */}
           <h1 className="text-3xl mb-4">{project?.name}</h1>
-          {/* </div> */}
           <p className="mb-4 leading-7">{project?.longDescription}</p>
           <Link
             href={
@@ -37,7 +40,8 @@ export default async function Page({ params }: Props) {
                 ? ""
                 : (project?.githubUrl as string)
             }
-            className="inline-block mb-4 border rounded-2xl px-4 py-1 text-sm bg-transparent text-canvas border-brand hover:ring-brand hover:scale-1 transition-all duration-200"
+            target="_blank"
+            className="inline-block mb-4 border rounded-2xl px-4 py-1 text-sm bg-transparent text-brand border-brand hover:ring-brand hover:scale-1 hover:text-background hover:bg-brand transition-all duration-200"
           >
             View souce code
           </Link>
