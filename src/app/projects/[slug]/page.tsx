@@ -25,7 +25,7 @@ export default async function Page({ params }: Props) {
             priority
             className="object-cover"
           />
-          <div className="absolute bg-background bottom-0 left-0 rounded-tr-3xl px-10 py-5">
+          <div className="absolute bg-background bottom-0 left-0 rounded-tr-3xl px-5 py-3 md:px-10 md:py-5">
             <div className="absolute size-4 bg-inherit -top-4 left-0 mask-[radial-gradient(circle_at_100%_0,transparent_15,black_16px)]" />
             {project?.type}
             <div className="absolute size-4 bg-inherit bottom-0 -right-4 mask-[radial-gradient(circle_at_100%_0,transparent_15,black_16px)]" />

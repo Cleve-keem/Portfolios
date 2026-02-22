@@ -161,4 +161,53 @@ export const projectData: ProjectType[] = [
     liveUrl: "https://beauty-nigeria.com",
     githubUrl: "https://github.com/Cleve-keem/personal-blog-marko",
   },
+  {
+    slug: "todo-list-app",
+    name: "Todo App",
+    category: "frontend",
+    type: "Mobile",
+    order: 7,
+    coverImage: "/projects/todo.png",
+    description:
+      "A Mobile Todo app for keeping track of your day to day activities. It is built with React Native",
+    longDescription:
+      "This project demonstrates a modern mobile app desing architecture using React Native.",
+    createdAt: "2025-12-12T15:38:49Z",
+    role: "Frontend Developer",
+    stack: ["React Native", "Expo Go"],
+    features: ["Reusable UI components", "Optimized performance"],
+    challenges:
+      "Managing states and working with different stack was difficult",
+    solutions:
+      "Leveraged Understanding partial hydration and structured middleware properly",
+    lessons:
+      "Learned performance-first architecture and server-rendered UI optimization.",
+    status: "completed",
+    liveUrl: null,
+    githubUrl: "https://github.com/Cleve-keem/ReactNative-Todo",
+  },
+  {
+    slug: "audiophile-ecommerce-webapp",
+    name: "Audiophile Ecommerce",
+    category: "frontend",
+    type: "Web App",
+    order: 8,
+    coverImage: "/projects/audiophile.png",
+    description: "An Ecommerce webapp for selling headphone and speakers.",
+    longDescription:
+      "A frontend fullstack project that uses Convex for backend management. Project built with NextJs for frontend and convex for backend",
+    createdAt: "",
+    role: "Fullstack Developer",
+    stack: ["NextJs", "Convex", "Figma UI"],
+    features: ["Reusable UI components", "Optimized performance"],
+    challenges:
+      "Managing states and working with different stack was difficult",
+    solutions:
+      "Leveraged Understanding partial hydration and structured middleware properly",
+    lessons:
+      "Learned performance-first architecture and server-rendered UI optimization.",
+    status: "completed",
+    liveUrl: null,
+    githubUrl: "https://github.com/Cleve-keem/audiophile-ecommerce-webapp",
+  },
 ];

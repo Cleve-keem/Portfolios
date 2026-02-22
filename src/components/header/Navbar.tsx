@@ -35,11 +35,16 @@ export default function Navbar({
               const Icon = item?.icon;
               return (
                 <li
-                  className={`flex items-center gap-4 text-xl ${isActive ? "text-brand" : "text-content-muted"}`}
+                  className={`flex items-center gap-4 text-xl ${isActive ? "text-brand" : "text-content-muted"} w-fit border`}
                   key={id}
+                  onClick={() => closeFn?.(false)}
                 >
                   {Icon && <Icon className="text-inherit" />}
-                  <Link href={item.path} className={`text-inherit`}>
+                  <Link
+                    href={item.path}
+                    className={`text-inherit`}
+                    onClick={() => closeFn?.(false)}
+                  >
                     {item.label}
                   </Link>
                 </li>
